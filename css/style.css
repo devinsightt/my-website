@@ -1,0 +1,426 @@
+*
+{
+	margin:0; padding: 0;
+	box-sizing: border-box;
+	text-transform: capitalize;
+}
+
+html
+{
+	font-size: 10px;
+	font-family: 'Montserrat', sans-serif;
+}
+
+a
+{
+	text-decoration: none;
+}
+
+.container
+{
+	min-height: 100vh;
+	width: 100%;
+	display: flex;
+	align-items: center; 
+	justify-content: center;
+}
+.section-title
+{
+	font-size: 4rem;
+	font-weight: 300;
+	color: black;
+	letter-spacing: 0.2rem;
+	text-transform: uppercase;
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+.section-title span
+{
+	color: crimson;
+	text-transform: uppercase;
+
+}
+
+p
+{
+	font-size: 1.4rem;
+	color: white;
+	text-align: center;
+	line-height: 2.5rem;
+	font-weight: 300;
+	letter-spacing: .05rem;
+}
+
+.img
+{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.cta {
+	display: inline-block;
+	padding: 10px 30px;
+	color: crimson;
+	font-weight: 700;
+	background-color: transparent;
+	border: 2px solid crimson;
+	font-size: 2rem;
+	text-transform: uppercase;
+	letter-spacing: .1rem;
+	margin-top: 30px;
+	transition: .3s ease;
+	transition-property: background-color, color;
+}
+.cta:hover {
+	color: white;
+	background-color: crimson;
+}
+
+
+/*intro section*/
+#hero
+{
+	background-image: url('../images/bg5.jpg');
+	background-size: cover;
+	background-position: top center;
+	position: relative;
+	z-index: 1;
+
+}
+
+
+#hero::after
+{
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	background-color: black;
+	height: 100%;
+	width: 100%;
+	opacity: 0.6;
+	z-index: -1;
+
+}
+
+#hero .hero
+{
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 100px;
+	justify-content: flex-start;
+}
+
+#hero h1 
+{
+	display: block;
+	width: fit-content;
+	font-size: 4rem;
+	color: transparent;
+	position:relative;
+	animation: text_reveal 0.5s forwards;
+	animation-delay: 1s;
+}
+
+
+#hero h1:nth-child(1)
+{
+	animation-delay: 1s;
+}
+
+#hero h1:nth-child(2)
+{
+	animation-delay: 2s;
+}
+
+#hero h1:nth-child(3)
+{
+	animation: text_reveal_3 0.5s forwards;
+	animation-delay: 3s;
+}
+
+#hero h1 span
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0%;
+	height: 100%;
+	background-color: crimson;
+	animation: text_reveal_box 1s ease;
+	animation-delay: 0.5s;
+}
+
+#hero h1:nth-child(1) span
+{
+	animation-delay: 0.5s;
+}
+
+
+#hero h1:nth-child(2) span
+{
+	animation-delay: 1.5s;
+}
+
+
+#hero h1:nth-child(3) span
+{
+	animation-delay: 2.5s;
+}
+
+
+
+
+/* end of intro section*/
+
+/*service section*/
+
+#service
+{
+}
+
+#service .service
+{
+	flex-direction: column;
+	text-align: center;
+	max-width: 1500px;
+	margin: 0 auto;
+	padding: 100px 0;
+
+}
+
+
+#service .service-top p
+{
+	color: black;
+	margin-left: 20px;
+
+}
+
+#service .service-bottom
+{
+	width: fit-content;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+#service .service-item
+{
+    flex-basis: 80%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 30px;
+	background-image: url('../images/bg1.jpg');
+    border-radius: 10px;
+    background-size: contain;
+    margin: 10px 5%;
+    width: 80%;
+    position: relative;
+    z-index: 1;	
+    overflow: hidden;
+}
+
+#service .service-item::after
+{
+	content: '';
+	background-color: black;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: 10px;
+	position: absolute;
+	opacity: 0.5;
+	z-index: -1;
+}
+#service .service-bottom .icon
+{
+	height: 80px;
+	width: 80px;
+	margin-bottom: 20px;
+}
+
+#service .service-bottom h2
+{
+	font-size: 2rem;
+	color: white;
+	text-transform: uppercase;
+	margin-bottom: 10px;
+	text-align: left;
+}
+
+#service .service-bottom p
+{
+	text-align: left;
+}
+
+/*end ofservice section*/
+
+
+/*project section*/
+
+#project .project
+{
+	flex-direction: column;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 100px 0;
+}
+
+#project .project-header h1
+{
+	margin-bottom: 50px;
+}
+
+#project .all-projects
+{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+#project .project-items
+{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	width: 80%;
+	margin: 20px auto;
+	overflow: hidden;
+	border-radius: 10px;
+}
+
+#project .project-info
+{
+	padding: 30px;
+	flex-basis: 50%;
+	height: 100%;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	flex-direction: column;
+	background-color: black;
+	opacity: .9;
+	color: white;
+
+}
+
+
+#project .project-info h1
+{
+	font-size: 4rem;
+	font-weight: 500;
+}
+
+
+#project .project-info h2
+{
+	font-size: 1.8rem;
+	font-weight: 500;
+	margin-top: 10px;
+}
+
+
+#project .project-info p
+{
+	text-align: left;
+	margin-top: 15px;
+}
+
+
+#project .project-img
+{
+	flex-basis: 50%;
+	height: 300px;
+	overflow: hidden;
+	position: relative;
+}
+
+#project .project-img::after
+{
+	content:'';
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background-color: black;
+	opacity: .6;
+}
+
+
+#project .project-img img
+{
+	transition: .4 ease transform;
+}
+
+#project .project-items:hover .project-img img
+{
+	transform: scale(1.1);
+}
+
+
+
+
+
+/*end of project section*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*keyframes*/
+
+@keyframes text_reveal_box
+{
+	50%
+	{
+		width: 100%;
+		left: 0;
+	}
+	100%
+	{
+		width: 0;
+		left: 100%;
+	}
+
+}
+
+@keyframes text_reveal
+{
+	100%{
+		color: white;
+	}
+}
+
+
+@keyframes text_reveal_3
+{
+	100%{
+		color: lightgreen;
+	}
+}
+
+
+/*end of keyframes*/
